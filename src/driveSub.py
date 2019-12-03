@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from std_msgs.msg import String
+from templecar.msg import Drive
 
 def callback(data):
     # This is where we implement the code to control the servos
