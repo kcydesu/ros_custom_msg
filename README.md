@@ -1,10 +1,10 @@
 # ros_custom_msg
 A repository to hold instructions to create a custom ros message and an example subscriber.
 
-# Before you start
+## Before you start
 This guide assumes that you have created a catkin_workspace already and have also already created a package. My workspace was called ```catkin_ws``` and my package was called ```templecar```.
 
-# Creating the message
+## Creating the message
 The first step in creating your custom message type is to enter your package and create a new directory to hold custom messages. 
 ```
 roscd templecar
@@ -23,7 +23,7 @@ float32 steering
 float32 speed
 ```
 
-# Setting up the workspace
+## Setting up the workspace
 Now, we need to make sure that we tell our workspace to generate and use these custom message types. We can do this by first editing the *package.xml* file to include the following lines (if it doesn't already).
 ```
 <build_depend>message_generation</build_depend>
@@ -59,3 +59,5 @@ After this, run the following commands inside your catkin_ws.
 catkin_make
 source devel/setup.bash
 ```
+## Example Publisher/Subscriber
+Included in the src folder are two files that can be used to implement this custom message type. Download both of these files, include them in the src folder for your package, and then remake your workspace.
