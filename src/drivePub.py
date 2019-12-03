@@ -5,7 +5,7 @@ from templecar.msg import Drive
 import random
 
 def talker():
-    pub = rospy.Publisher('drive_controls', Drive, queue_size=10)
+    pub = rospy.Publisher('driving_controls', Drive, queue_size=10)
     rospy.init_node('drive_commands', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
